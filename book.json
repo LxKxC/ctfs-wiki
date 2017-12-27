@@ -1,0 +1,41 @@
+{
+	"variables": {
+		"title": "CTFS-WiKi",
+		"author":"sstrunk",
+		"description":"CTFS-WiKi中集合了WEB类常见的各种漏洞，致力于漏洞准确性、丰富性",
+		"theme": "theme-comscore",
+		"copyright": "Copyright CTFS-WiKi"
+	},
+	"plugins": ["splitter",
+	"expandable-chapters-small",
+	"github",
+	"-lunr", 
+	"-search", 
+	"search-plus",
+	"multipart"],
+	"pluginsConfig": {
+	 "theme-default": {
+            "showLevel": true
+        },
+        "expandable-chapters-small":{},
+	"github": {
+          "url": "https://github.com/ctfs-wiki"
+             }
+        },
+	"collapsible_menu":true,
+	"level_number":true,
+	"links": {
+		"sidebar":{
+        	   "Home":"http://sstrunk.com"
+                },	
+		"gitbook": false,
+		"sharing": {
+			"all":false,
+			"vk": false,
+			"facebook": true,
+			"twitter": true,
+			"google": true,
+			"weibo": true
+		}
+	}
+}

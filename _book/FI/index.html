@@ -1,0 +1,574 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>文件包含漏洞 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="LFI.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://sstrunk.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    CTFS-WiKi 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    文件包含漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="LFI.html">
+            
+                <a href="LFI.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    本地文件包含漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="RFI.html">
+            
+                <a href="RFI.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    远程文件包含漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="wrappers.html">
+            
+                <a href="wrappers.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    PHP伪协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="repair.html">
+            
+                <a href="repair.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    漏洞修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../SQLi/">
+            
+                <a href="../SQLi/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    SQL注入漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../SQLi/example1.html">
+            
+                <a href="../SQLi/example1.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    数字型注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../SQLI/example1.html">
+            
+                <a href="../SQLI/example1.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    字符型注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../UP/">
+            
+                <a href="../UP/">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    文件上传漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../UP/example1.html">
+            
+                <a href="../UP/example1.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    前端JS绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../UP/example1.html">
+            
+                <a href="../UP/example1.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    文件名绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../UP/example1.html">
+            
+                <a href="../UP/example1.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    Content-type绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../UP/example1.html">
+            
+                <a href="../UP/example1.html">
+            
+                    
+                        <b>1.4.4.</b>
+                    
+                    文件头绕过
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../parse/">
+            
+                <a href="../parse/">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    解析漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../parse/example1.html">
+            
+                <a href="../parse/example1.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    IIS 5.x/6.0解析漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../parse/example1.html">
+            
+                <a href="../parse/example1.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    IIS 7.0/IIS 7.5/ Nginx <8.03畸形解析漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../parse/example1.html">
+            
+                <a href="../parse/example1.html">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    Nginx <8.03 空字节代码执行漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../parse/example1.html">
+            
+                <a href="../parse/example1.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    Apache解析漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >文件包含漏洞</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6587;&#x4EF6;&#x5305;&#x542B;&#x6F0F;&#x6D1E;">&#x6587;&#x4EF6;&#x5305;&#x542B;&#x6F0F;&#x6D1E;</h1>
+<h3 id="&#x6587;&#x4EF6;&#x5305;&#x542B;&#x7B80;&#x4ECB;">&#x6587;&#x4EF6;&#x5305;&#x542B;&#x7B80;&#x4ECB;</h3>
+<p>&#x670D;&#x52A1;&#x5668;&#x6267;&#x884C;PHP&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x51FD;&#x6570;&#x52A0;&#x8F7D;&#x53E6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7684;PHP&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4E14;&#x5F53;PHP&#x6765;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x4F1A;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x8282;&#x7701;&#x5927;&#x91CF;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x60A8;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4F9B;&#x6240;&#x6709;&#x7F51;&#x9875;&#x5F15;&#x7528;&#x7684;&#x6807;&#x51C6;&#x9875;&#x7709;&#x6216;&#x83DC;&#x5355;&#x6587;&#x4EF6;&#x3002;&#x5F53;&#x9875;&#x7709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x65F6;&#xFF0C;&#x60A8;&#x53EA;&#x66F4;&#x65B0;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6587;&#x4EF6;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x6216;&#x8005;&#x5F53;&#x60A8;&#x5411;&#x7F51;&#x7AD9;&#x6DFB;&#x52A0;&#x4E00;&#x5F20;&#x65B0;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x4EC5;&#x4EC5;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E00;&#x4E0B;&#x83DC;&#x5355;&#x6587;&#x4EF6;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x66F4;&#x65B0;&#x6240;&#x6709;&#x7F51;&#x9875;&#x4E2D;&#x7684;&#x94FE;&#x63A5;&#xFF09;&#x3002;</p>
+<h3 id="&#x6587;&#x4EF6;&#x5305;&#x542B;&#x51FD;&#x6570;">&#x6587;&#x4EF6;&#x5305;&#x542B;&#x51FD;&#x6570;</h3>
+<p>PHP&#x4E2D;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x51FD;&#x6570;&#x6709;&#x4EE5;&#x4E0B;&#x56DB;&#x79CD;&#xFF1A;</p>
+<p>require()</p>
+<p>require_once()</p>
+<p>include()</p>
+<p>include_once()</p>
+<p>include&#x548C;require&#x533A;&#x522B;&#x4E3B;&#x8981;&#x662F;&#xFF0C;include&#x5728;&#x5305;&#x542B;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x8B66;&#x544A;&#xFF0C;&#x7A0B;&#x5E8F;&#x7EE7;&#x7EED;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF1B;&#x800C;require&#x51FD;&#x6570;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x62A5;&#x9519;&#x5E76;&#x9000;&#x51FA;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x800C;include_once()&#xFF0C;require_once()&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4E0E;&#x524D;&#x4E24;&#x4E2A;&#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x6B21;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x5728;&#x811A;&#x672C;&#x6267;&#x884C;&#x671F;&#x95F4;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x6709;&#x53EF;&#x80FD;&#x88AB;&#x5305;&#x62EC;&#x8D85;&#x8FC7;&#x4E00;&#x6B21;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x60F3;&#x786E;&#x4FDD;&#x5B83;&#x53EA;&#x88AB;&#x5305;&#x62EC;&#x4E00;&#x6B21;&#x4EE5;&#x907F;&#x514D;&#x51FD;&#x6570;&#x91CD;&#x5B9A;&#x4E49;&#xFF0C;&#x53D8;&#x91CF;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#x7B49;&#x95EE;&#x9898;&#x3002;</p>
+<h3 id="&#x6F0F;&#x6D1E;&#x4EA7;&#x751F;&#x539F;&#x56E0;">&#x6F0F;&#x6D1E;&#x4EA7;&#x751F;&#x539F;&#x56E0;</h3>
+<p>&#x6587;&#x4EF6;&#x5305;&#x542B;&#x51FD;&#x6570;&#x52A0;&#x8F7D;&#x7684;&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x8FC7;&#x6EE4;&#x6216;&#x8005;&#x4E25;&#x683C;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6237;&#x63A7;&#x5236;&#xFF0C;&#x5305;&#x542B;&#x5176;&#x4ED6;&#x6076;&#x610F;&#x6587;&#x4EF6;&#xFF0C;&#x5BFC;&#x81F4;&#x4E86;&#x6267;&#x884C;&#x4E86;&#x975E;&#x9884;&#x671F;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code>&lt;?php
+    $filename  = $_GET[&apos;filename&apos;];
+    include($filename);
+?&gt;
+</code></pre><p>&#x4F8B;&#x5982;&#xFF1A;
+$_GET[&apos;filename&apos;]&#x53C2;&#x6570;&#x5F00;&#x53D1;&#x8005;&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x4E25;&#x683C;&#x7684;&#x8FC7;&#x6EE4;&#xFF0C;&#x76F4;&#x63A5;&#x5E26;&#x5165;&#x4E86;include&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x653B;&#x51FB;&#x8005;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;$_GET[&apos;filename&apos;]&#x7684;&#x503C;&#xFF0C;&#x6267;&#x884C;&#x975E;&#x9884;&#x671F;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: CTFS-WiKi 介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="LFI.html" class="navigation navigation-next " aria-label="Next page: 本地文件包含漏洞">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"文件包含漏洞","level":"1.2","depth":1,"next":{"title":"本地文件包含漏洞","level":"1.2.1","depth":2,"path":"FI/LFI.md","ref":"FI/LFI.md","articles":[]},"previous":{"title":"CTFS-WiKi 介绍","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","expandable-chapters-small","github","-lunr","-search","search-plus","multipart","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/ctfs-wiki"},"livereload":{},"splitter":{},"multipart":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"search-plus":{}},"level_number":true,"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"collapsible_menu":true,"variables":{"title":"CTFS-WiKi","author":"sstrunk","description":"CTFS-WiKi中集合了WEB类常见的各种漏洞，致力于漏洞准确性、丰富性","theme":"theme-comscore","copyright":"Copyright CTFS-WiKi"},"links":{"sidebar":{"Home":"http://sstrunk.com"},"gitbook":false,"sharing":{"all":false,"vk":false,"facebook":true,"twitter":true,"google":true,"weibo":true}},"gitbook":"*"},"file":{"path":"FI/README.md","mtime":"2017-12-26T08:15:15.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-27T07:03:32.475Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
